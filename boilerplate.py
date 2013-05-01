@@ -44,9 +44,11 @@ pass
 def sample_func(self, args):
   print("This is a sample program, written with boilerplate.")
   self.log.info('You can only see me with --verbose=INFO or higher.')
+  self.log.info('Foo is: {}'.format(self.args.foo))
   return 0
 
 if __name__ == '__main__':
   plate = Boilerplate(sample_func, 'Test program')
+  plate.parser.add_argument('--foo', help='Sample option.')
   plate.main()
   pass
