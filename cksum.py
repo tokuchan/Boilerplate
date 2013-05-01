@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 
 import boilerplate
+import logging
+import re
 
-def cksum(plate):
-  input_string = plate.args.input_string
-  log = plate.log
+def cksum(input_string):
+  log = logging.getLogger(__name__)
   log.debug('Input string: {}'.format(input_string))
   cap_string = ''.join([str.capitalize(x) for x in input_string])
   log.debug('Capitalized string: {}'.format(cap_string))
-  prefix = cap_string[:2]
+  space_free_string = re.sub('\s+', '', cap_string)
+  log.debug('Space free string: {}'.format(space_free_string))
+  prefix = space_free_string[:2]
   log.debug('Prefix string: {}'.format(prefix))
   suffix_string = cap_string[2:]
   log.debug('Suffix string: {}'.format(suffix_string))
@@ -18,7 +21,7 @@ def cksum(plate):
 
 def main(self, args):
   plate.log.info('Starting program.')
-  print(cksum(plate))
+  print(cksum(plate.args.input_string))
   plate.log.info('Stopping program.')
   pass
 
