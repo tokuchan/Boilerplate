@@ -31,32 +31,32 @@
         <hr>
 
         <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+          <h3>Quick Start</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<pre><code>from Boilerplate import boilerplate as bp
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+def my_func(plate, args):
+   plate.log.info('Loggers are set up automatically in BP.')
+   plate.log.info('Try using --verbose=INFO to see these messages.')
+   plate.log.info('plate.args.foo ({}) == args.foo ({}), for your convenience.')
+   plate.log.info('Try setting X_FOO, where X is the name of this program\'s file.')
+
+if __name__ == '__main__':
+  my_bp = bp.Boilerplate(my_func, 'Test program for Boilerplate.')
+  my_bp.parser.add_argument('--foo', 
+    action=bp.EnvironmentDefault, 
+    environment_variable=self.envbase+'_FOO', 
+    help='Sample option.')
+  my_bp.main()
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h3>Contributing</h3>
 
-<h3>Designer Templates</h3>
+<p>As you can, no doubt, tell, this project is an infant. There is much to do before I can call it a beta release. Please feel free to fork a copy and play around. If you create something cool, I'll happily take pull requests!</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h3>Bug Reports</h3>
 
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>GitHub offers an issue tracker, so if there is a problem that is not resolved by documentation, you can submit a bug report. I cannot promise to get to them right away, but I will look there first when deciding what to do next with this project.</p>
         </section>
 
         <footer>
