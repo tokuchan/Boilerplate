@@ -2,8 +2,6 @@ Boilerplate
 ===========
 
 A Python framework for short, readable, command line programs in Python.
-Boilerplate
-===========
 
 By Sean R. Spillane
 -------------------
